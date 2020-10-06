@@ -4,18 +4,25 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int n;
-	int sum=0; 
-	int i;
 	
-	printf("input a number:");
-	scanf(" %i", &n);
+	int answer=59;
+	int k, trial;
+		
+	do {
+		 printf("input a number:");
+		scanf("%d",&k);
+		
+		if(answer>k)
+			printf("low!\n");
+		else if(answer<k)
+			printf("high!\n");
+		
+		trial++;
 	
-	for(i=1;i<=n;i++)
-		sum+=i;
+	}while(k !=answer); //k가 answer과 일치하지 않으면 반복하러 위로 올라가라. 
 	
- 
-	printf("the result is %i \n", sum);
+	printf("Congratulations, number of trials is %d",trial); 
+	
 	return 0;
 	
 }
